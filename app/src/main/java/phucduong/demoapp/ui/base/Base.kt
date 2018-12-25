@@ -4,8 +4,8 @@ interface Base {
     interface View {
 
         fun showProgress()
-
         fun hideProgress()
+        fun showErrorDialog()
     }
 
     interface Presenter<V : View, I : Interactor> {

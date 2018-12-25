@@ -6,6 +6,8 @@ buildscript {
         dagger2Version = '2.19'
         rxjava2Version = '2.2.4'
         rxandroidVersion = '2.1.0'
+        gsonVersion = '2.8.0'
+        rx2FastAndroidNetworking = '1.0.1'
     }
     repositories {
         google()
