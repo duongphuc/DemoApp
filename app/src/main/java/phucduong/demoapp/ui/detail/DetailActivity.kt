@@ -1,6 +1,7 @@
 package phucduong.demoapp.ui.detail
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
