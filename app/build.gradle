@@ -18,11 +18,11 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"https://api.github.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://raw.githubusercontent.com/tikivn/android-home-test/v2\"")
         }
         release {
             minifyEnabled false
-            buildConfigField("String", "BASE_URL", "\"https://api.github.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://raw.githubusercontent.com/tikivn/android-home-test/v2\"")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
