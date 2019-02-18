@@ -4,7 +4,7 @@ import android.content.Context
 import android.support.v7.widget.LinearLayoutManager
 import dagger.Module
 import dagger.Provides
-import phucduong.demoapp.adapter.ListUserAdapter
+import phucduong.demoapp.adapter.ListKeywordAdapter
 import phucduong.demoapp.ui.list.ListContract
 import phucduong.demoapp.ui.list.ListInteractor
 import phucduong.demoapp.ui.list.ListPresenter
@@ -20,7 +20,7 @@ class ListActivityModule {
             : ListContract.Presenter<ListContract.View, ListContract.Interactor> = listPresenter
 
     @Provides
-    internal fun provideListAdapter(context: Context): ListUserAdapter = ListUserAdapter(ArrayList(), context)
+    internal fun provideListAdapter(context: Context): ListKeywordAdapter = ListKeywordAdapter(ArrayList(), context)
 
     @Provides
     internal fun provideLinearLayoutManager(context: Context): LinearLayoutManager = LinearLayoutManager(context)

@@ -2,7 +2,6 @@ package phucduong.demoapp.ui.list
 
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
-import phucduong.demoapp.data.network.response.User
 import phucduong.demoapp.ui.base.BasePresenter
 import phucduong.demoapp.util.SchedulerProvider
 import javax.inject.Inject
@@ -12,16 +11,15 @@ class ListPresenter<V : ListContract.View, I : ListContract.Interactor> @Inject 
     : BasePresenter<V, I>(interactor, schedulerProvider, disposable), phucduong.demoapp.ui.list.ListContract.Presenter<V, I>{
     override fun onAttach(v: V?) {
         super.onAttach(v)
-        getListUser(0);
+        getListKeyword();
     }
 
-    override fun getListUser(lastId: Int)
-    {
+    override fun getListKeyword() {
         interactor?.let {
-            compositeDisposable.add(it.getListUser(lastId)
+            compositeDisposable.add(it.getListKeyword()
                     .compose(schedulerProvider.ioToMainObservableScheduler())
                     .subscribe({ listUser ->
-                        getView()?.displayListUser(listUser)
+                        getView()?.displayListKeyword(listUser)
                     }, {
                         getView()?.showErrorDialog() }))
         }
